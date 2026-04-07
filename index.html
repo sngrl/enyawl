@@ -1,1 +1,1089 @@
-# hello
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ЭтоНеЯ | Ключи к цифровой свободе</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&family=JetBrains+Mono:wght@500;700&display=swap"
+    rel="stylesheet">
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    :root {
+      --bg-color: #050505;
+      --bg-secondary: #0a0a0a;
+      --accent-red: #ff1c2a;
+      --accent-red-hover: #ff3340;
+      --accent-glow: rgba(255, 28, 42, 0.4);
+      --card-bg: rgba(20, 20, 20, 0.5);
+      --card-border: rgba(255, 255, 255, 0.05);
+      --card-border-hover: rgba(255, 28, 42, 0.3);
+      --text-main: #ffffff;
+      --text-muted: #888888;
+      --text-dim: #555555;
+      --success: #00ff66;
+      --success-bg: rgba(0, 255, 102, 0.1);
+      --success-glow: rgba(0, 255, 102, 0.4);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      overflow-x: hidden;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--bg-secondary);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #333;
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--accent-red);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .bg-glow {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      pointer-events: none;
+      overflow: hidden;
+      background-color: var(--bg-color);
+    }
+
+    .bg-glow::before,
+    .bg-glow::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(120px);
+      opacity: 0.15;
+      animation: floatGlow 20s infinite alternate ease-in-out;
+      will-change: transform;
+    }
+
+    .bg-glow::before {
+      width: 60vw;
+      height: 60vw;
+      background: var(--accent-red);
+      top: -20vw;
+      left: -10vw;
+    }
+
+    .bg-glow::after {
+      width: 50vw;
+      height: 50vw;
+      background: #cc0022;
+      bottom: -10vw;
+      right: -10vw;
+      animation-duration: 25s;
+      animation-direction: alternate-reverse;
+    }
+
+    @keyframes floatGlow {
+      0% {
+        transform: translate(0, 0) scale(1);
+      }
+
+      100% {
+        transform: translate(5vw, 10vw) scale(1.1);
+      }
+    }
+
+    .hero-anim {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: heroFadeUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+      will-change: opacity, transform;
+    }
+
+    .hero-anim.delay-1 {
+      animation-delay: 0.1s;
+    }
+
+    .hero-anim.delay-2 {
+      animation-delay: 0.3s;
+    }
+
+    .hero-anim.delay-3 {
+      animation-delay: 0.5s;
+    }
+
+    @keyframes heroFadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    header {
+      padding: 100px 0 60px;
+      text-align: center;
+      position: relative;
+    }
+
+    .logo-ring {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: rgba(255, 28, 42, 0.05);
+      border: 2px solid rgba(255, 28, 42, 0.3);
+      box-shadow: 0 0 40px var(--accent-glow);
+      margin-bottom: 30px;
+      color: var(--accent-red);
+      position: relative;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .logo-ring i {
+      width: 50px;
+      height: 50px;
+      filter: drop-shadow(0 0 10px var(--accent-red));
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0);
+        box-shadow: 0 0 40px var(--accent-glow);
+      }
+
+      50% {
+        transform: translateY(-10px);
+        box-shadow: 0 0 60px rgba(255, 28, 42, 0.6);
+      }
+    }
+
+    h1 {
+      font-size: 4rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -2px;
+      margin-bottom: 16px;
+      line-height: 1.1;
+    }
+
+    .text-red {
+      color: var(--accent-red);
+      text-shadow: 0 0 20px var(--accent-glow);
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-size: 2.2rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 40px;
+      letter-spacing: -0.5px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 24px;
+      margin-bottom: 80px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.6s forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .card:hover {
+      border-color: var(--card-border-hover);
+      box-shadow: 0 16px 40px rgba(255, 28, 42, 0.08);
+      transform: translateY(-5px);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: rgba(255, 28, 42, 0.1);
+      border: 1px solid rgba(255, 28, 42, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-red);
+      transition: all 0.3s;
+    }
+
+    .card:hover .card-icon {
+      background: var(--accent-red);
+      color: #fff;
+      box-shadow: 0 0 20px var(--accent-glow);
+    }
+
+    .card-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .keys-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex-grow: 1;
+    }
+
+    .key-btn {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      padding: 16px 20px;
+      color: var(--text-main);
+      font-size: 0.95rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.3s ease;
+      width: 100%;
+      text-align: left;
+    }
+
+    .key-label {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .key-tag {
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      letter-spacing: 1px;
+      transition: color 0.3s ease;
+    }
+
+    .key-desc {
+      font-size: 0.85rem;
+      color: var(--text-main);
+      font-weight: 500;
+    }
+
+    .icon-wrapper {
+      color: var(--text-muted);
+      transition: all 0.3s;
+      display: flex;
+    }
+
+    .key-btn:hover {
+      background: rgba(255, 28, 42, 0.05);
+      border-color: rgba(255, 28, 42, 0.3);
+    }
+
+    .key-btn:hover .icon-wrapper {
+      color: var(--accent-red);
+      transform: scale(1.1);
+    }
+
+    .key-btn:hover .key-tag {
+      color: var(--accent-red);
+    }
+
+    .key-btn.success {
+      background: var(--success-bg);
+      border-color: var(--success);
+    }
+
+    .key-btn.success .key-tag,
+    .key-btn.success .key-desc {
+      color: var(--success);
+    }
+
+    .key-btn.success .icon-wrapper {
+      color: var(--success);
+      transform: scale(1.1);
+      filter: drop-shadow(0 0 8px var(--success-glow));
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 100px;
+    }
+
+    .info-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .info-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, transparent, var(--accent-red), transparent);
+      opacity: 0.5;
+    }
+
+    .info-title {
+      font-size: 1.4rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--text-main);
+    }
+
+    .info-title i {
+      color: var(--accent-red);
+    }
+
+    .instruction-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .instruction-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      font-size: 1.05rem;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.5;
+    }
+
+    .step-num {
+      background: rgba(255, 28, 42, 0.1);
+      color: var(--accent-red);
+      border: 1px solid rgba(255, 28, 42, 0.3);
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .tg-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(255, 28, 42, 0.1);
+      border: 1px solid var(--accent-red);
+      padding: 16px 32px;
+      border-radius: 100px;
+      color: var(--text-main);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+      margin-top: 24px;
+    }
+
+    .tg-link:hover {
+      background: var(--accent-red);
+      box-shadow: 0 0 30px var(--accent-glow);
+      transform: translateY(-2px);
+    }
+
+    footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 60px 0;
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-size: 1.2rem;
+      font-weight: 900;
+      letter-spacing: 4px;
+      margin-bottom: 16px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+
+    .footer-copy {
+      font-size: 0.85rem;
+      color: var(--text-dim);
+      margin-bottom: 30px;
+    }
+
+    .developer-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-family: inherit;
+      font-weight: 500;
+      font-size: 0.9rem;
+      padding: 12px 24px;
+      border-radius: 100px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      color: var(--text-main);
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--accent-red);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--accent-red);
+      animation: pulseDot 2s infinite;
+    }
+
+    @keyframes pulseDot {
+      0% {
+        box-shadow: 0 0 0 0 rgba(255, 28, 42, 0.6);
+      }
+
+      70% {
+        box-shadow: 0 0 0 10px rgba(255, 28, 42, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(255, 28, 42, 0);
+      }
+    }
+
+    .developer-badge:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(5, 5, 5, 0.6);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-content {
+      background: rgba(15, 15, 15, 0.8);
+      border: 1px solid rgba(255, 28, 42, 0.2);
+      border-radius: 28px;
+      padding: 40px;
+      width: 90%;
+      max-width: 420px;
+      text-align: center;
+      position: relative;
+      transform: scale(0.9) translateY(20px);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(255, 28, 42, 0.1);
+    }
+
+    .modal-overlay.active .modal-content {
+      transform: scale(1) translateY(0);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: color 0.3s, transform 0.3s;
+      padding: 5px;
+    }
+
+    .modal-close:hover {
+      color: var(--text-main);
+      transform: rotate(90deg);
+    }
+
+    .modal-avatar {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      padding: 4px;
+      background: linear-gradient(135deg, var(--accent-red), transparent, var(--accent-red));
+      position: relative;
+      animation: spinAvatar 6s linear infinite;
+    }
+
+    @keyframes spinAvatar {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .modal-avatar img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      background: var(--bg-secondary);
+      animation: spinAvatarReverse 6s linear infinite;
+    }
+
+    @keyframes spinAvatarReverse {
+      100% {
+        transform: rotate(-360deg);
+      }
+    }
+
+    .modal-name {
+      font-size: 2rem;
+      font-weight: 900;
+      margin-bottom: 2px;
+      letter-spacing: -0.5px;
+      color: var(--text-main);
+    }
+
+    .modal-aka {
+      display: block;
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      font-weight: 500;
+    }
+
+    .text-gradient {
+      background: linear-gradient(135deg, #ffffff, var(--accent-red));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 900;
+      font-style: italic;
+    }
+
+    .modal-desc {
+      font-size: 0.95rem;
+      color: var(--text-dim);
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .modal-links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .modal-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 16px;
+      border-radius: 16px;
+      color: var(--text-main);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    .modal-link:hover {
+      background: rgba(255, 28, 42, 0.1);
+      border-color: rgba(255, 28, 42, 0.4);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(255, 28, 42, 0.1);
+    }
+
+    .toast-container {
+      position: fixed;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      pointer-events: none;
+    }
+
+    .toast {
+      background: rgba(10, 10, 10, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--success);
+      color: var(--success);
+      padding: 16px 28px;
+      border-radius: 100px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 10px 40px rgba(0, 255, 102, 0.15);
+      animation: toastEnter 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    }
+
+    .toast i {
+      filter: drop-shadow(0 0 5px var(--success-glow));
+    }
+
+    .toast.hide {
+      animation: toastLeave 0.4s ease-in forwards;
+    }
+
+    @keyframes toastEnter {
+      from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.9);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes toastLeave {
+      from {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+
+      to {
+        opacity: 0;
+        transform: translateY(40px) scale(0.9);
+      }
+    }
+
+    @media (max-width: 900px) {
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 60px 0 40px;
+      }
+
+      h1 {
+        font-size: 2.8rem;
+      }
+
+      .logo-ring {
+        width: 100px;
+        height: 100px;
+      }
+
+      .logo-ring i {
+        width: 40px;
+        height: 40px;
+      }
+
+      .section-title {
+        font-size: 1.8rem;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .info-card {
+        padding: 24px;
+      }
+
+      .tg-link {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="bg-glow"></div>
+  <div class="toast-container" id="toastContainer"></div>
+
+  <div class="modal-overlay" id="devModal">
+    <div class="modal-content">
+      <button class="modal-close" id="closeModal">
+        <i data-lucide="x"></i>
+      </button>
+
+      <div class="modal-avatar">
+        <img src="https://github.com/yamixdev.png" alt="ilushadev">
+      </div>
+
+      <h3 class="modal-name">ilushadev</h3>
+      <span class="modal-aka">aka <span class="text-gradient">ILO</span></span>
+
+      <p class="modal-desc">
+        Создаю стиль и делаю по кайфу:3
+      </p>
+
+      <div class="modal-links">
+        <a href="https://github.com/yamixdev" target="_blank" class="modal-link">
+          <i data-lucide="github"></i>
+          Мой GitHub
+        </a>
+        <a href="https://yamixdev.github.io/bio/" target="_blank" class="modal-link">
+          <i data-lucide="globe"></i>
+          Сайт-визитка
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="container">
+      <div class="hero-anim delay-1">
+        <div class="logo-ring">
+          <i data-lucide="key-round"></i>
+        </div>
+      </div>
+
+      <div class="hero-anim delay-2">
+        <h1>ЭТО <span class="text-red">НЕ</span> Я</h1>
+      </div>
+
+      <div class="hero-anim delay-3">
+        <p class="subtitle">Премиум ключи к цифровой свободе. Быстро. Безопасно. Красиво.</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2 class="section-title">Актуальные Ключи</h2>
+
+    <div class="grid" id="keysGrid">
+    </div>
+
+    <div class="info-grid">
+      <div class="info-card">
+        <h3 class="info-title">
+          <i data-lucide="book-open"></i>
+          Инструкция
+        </h3>
+        <ul class="instruction-list">
+          <li>
+            <div class="step-num">1</div> Выберите нужный список и скопируйте ключ
+          </li>
+          <li>
+            <div class="step-num">2</div> Откройте ваш VPN-клиент (V2RayNG, V2Box, Nekobox)
+          </li>
+          <li>
+            <div class="step-num">3</div> Импортируйте профиль из буфера обмена
+          </li>
+          <li>
+            <div class="step-num">4</div> Подключитесь и наслаждайтесь свободой
+          </li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <h3 class="info-title">
+          <i data-lucide="users"></i>
+          Сообщество
+        </h3>
+        <p style="color: rgba(255,255,255,0.7); margin-bottom: 10px;">
+          Подписывайтесь на наш канал в Telegram, чтобы получать обновления зеркал, новости об обходах и общаться с
+          единомышленниками.
+        </p>
+        <a href="https://t.me/YoutubeUnBlockRU" target="_blank" class="tg-link">
+          <i data-lucide="send"></i>
+          YoutubeUnBlockRU
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-logo">Єто ◦ Ні ◦ Я | Это ◦ Не ◦ Я</div>
+      <p class="footer-copy mono">Благодарность проектам: Спасибо подпискам: Igareck, LowiK, ByeWhiteLists, YzeNet. И волонтёрам: Slutvibe, AR34, Langar1337, Miroslav_off, Pinochet420, activist0ff, mazepaa, FlexVerified, nloverx</p>
+
+      <button id="openDevModal" class="developer-badge">
+        <span class="status-dot"></span>
+        Сайт создан ilushadev
+      </button>
+    </div>
+  </footer>
+
+  <script>
+    const subCategories = [
+  {
+    title: "ТОЛЬКО БЕЛЫЕ СПИСКИ",
+    icon: "shield-check",
+    links: [
+      { label: "Основа [a9fm.site]", url: "https://etoneya.a9fm.site/whitelist" },
+      { label: "Зеркало №1 [alley.serv00]", url: "https://alley.serv00.net/whitelist" },
+      { label: "Зеркало №2 [kangel.tech]", url: "https://internet-tenshi.kangel.tech/whitelist" },
+      { label: "Зеркало №3 [github]", url: "https://raw.githubusercontent.com/EtoNeYaProject/etoneyaproject.github.io/refs/heads/main/whitelist" },
+      { label: "Зеркало №4 [jsdelivr]", url: "https://cdn.jsdelivr.net/gh/EtoNeYaProject/EtoNeYaProject.github.io@refs/heads/main/whitelist" },
+      { label: "Зеркало №5 [yandex]", url: "https://translate.yandex.ru/translate?url=https://etoneya.a9fm.site/whitelist&lang=en-ru" },
+      { label: "Зеркало №6 [gitverse]", url: "https://gitverse.ru/api/repos/nloverx/EtoNeYa_Subs/raw/branch/master/whitelist" }
+    ]
+  },
+  {
+    title: "РАБОТАЕТ ГЕМИНИ",
+    icon: "bot",
+    links: [
+      { label: "Основа [a9fm.site]", url: "https://etoneya.a9fm.site/gemini" },
+      { label: "Зеркало №1 [alley.serv00]", url: "https://alley.serv00.net/gemini" },
+      { label: "Зеркало №2 [kangel.tech]", url: "https://internet-tenshi.kangel.tech/gemini" },
+      { label: "Зеркало №3 [github]", url: "https://raw.githubusercontent.com/EtoNeYaProject/etoneyaproject.github.io/refs/heads/main/gemini" },
+      { label: "Зеркало №4 [jsdelivr]", url: "https://cdn.jsdelivr.net/gh/EtoNeYaProject/EtoNeYaProject.github.io@refs/heads/main/gemini" },
+      { label: "Зеркало №5 [yandex]", url: "https://translate.yandex.ru/translate?url=https://etoneya.a9fm.site/gemini&lang=en-ru" },
+      { label: "Зеркало №6 [gitverse]", url: "https://gitverse.ru/api/repos/nloverx/EtoNeYa_Subs/raw/branch/master/gemini" }
+    ]
+  },
+  {
+    title: "РАБОТАЕТ ЮТУБ",
+    icon: "youtube",
+    links: [
+      { label: "Основа [a9fm.site]", url: "https://etoneya.a9fm.site/youtube" },
+      { label: "Зеркало №1 [alley.serv00]", url: "https://alley.serv00.net/youtube" },
+      { label: "Зеркало №2 [kangel.tech]", url: "https://internet-tenshi.kangel.tech/youtube" },
+      { label: "Зеркало №3 [github]", url: "https://raw.githubusercontent.com/EtoNeYaProject/etoneyaproject.github.io/refs/heads/main/youtube" },
+      { label: "Зеркало №4 [jsdelivr]", url: "https://cdn.jsdelivr.net/gh/EtoNeYaProject/EtoNeYaProject.github.io@refs/heads/main/youtube" },
+      { label: "Зеркало №5 [yandex]", url: "https://translate.yandex.ru/translate?url=https://etoneya.a9fm.site/youtube&lang=en-ru" },
+      { label: "Зеркало №6 [gitverse]", url: "https://gitverse.ru/api/repos/nloverx/EtoNeYa_Subs/raw/branch/master/youtube" }
+    ]
+  },
+  {
+    title: "РАБОТАЕТ ЮТУБ МУЗЫКА",
+    icon: "music",
+    links: [
+      { label: "Основа [a9fm.site]", url: "https://etoneya.a9fm.site/ytm" },
+      { label: "Зеркало №1 [alley.serv00]", url: "https://alley.serv00.net/ytm" },
+      { label: "Зеркало №2 [kangel.tech]", url: "https://internet-tenshi.kangel.tech/ytm" },
+      { label: "Зеркало №3 [github]", url: "https://raw.githubusercontent.com/EtoNeYaProject/etoneyaproject.github.io/refs/heads/main/ytm" },
+      { label: "Зеркало №4 [jsdelivr]", url: "https://cdn.jsdelivr.net/gh/EtoNeYaProject/EtoNeYaProject.github.io@refs/heads/main/ytm" },
+      { label: "Зеркало №5 [yandex]", url: "https://translate.yandex.ru/translate?url=https://etoneya.a9fm.site/ytm&lang=en-ru" },
+      { label: "Зеркало №6 [gitverse]", url: "https://gitverse.ru/api/repos/nloverx/EtoNeYa_Subs/raw/branch/master/ytm" }
+    ]
+  },
+  {
+    title: "ДРУГИЕ",
+    icon: "globe",
+    links: [
+      { label: "Основа [a9fm.site]", url: "https://etoneya.a9fm.site/other" },
+      { label: "Зеркало №1 [alley.serv00]", url: "https://alley.serv00.net/other" },
+      { label: "Зеркало №2 [kangel.tech]", url: "https://internet-tenshi.kangel.tech/other" },
+      { label: "Зеркало №3 [github]", url: "https://raw.githubusercontent.com/EtoNeYaProject/etoneyaproject.github.io/refs/heads/main/other" },
+      { label: "Зеркало №4 [jsdelivr]", url: "https://cdn.jsdelivr.net/gh/EtoNeYaProject/EtoNeYaProject.github.io@refs/heads/main/other" },
+      { label: "Зеркало №5 [yandex]", url: "https://translate.yandex.ru/translate?url=https://etoneya.a9fm.site/other&lang=en-ru" },
+      { label: "Зеркало №6 [gitverse]", url: "https://gitverse.ru/api/repos/nloverx/EtoNeYa_Subs/raw/branch/master/other" }
+    ]
+  },
+  {
+    title: "ВСЕ ВМЕСТЕ",
+    icon: "layers",
+    links: [
+      { label: "Основа №1 [a9fm.site]", url: "https://etoneya.a9fm.site/1" },
+      { label: "Основа №2 [a9fm.site]", url: "https://etoneya.a9fm.site/2" },
+      { label: "Зеркало №1 [alley.serv00]", url: "https://alley.serv00.net/1" },
+      { label: "Зеркало №2 [alley.serv00]", url: "https://alley.serv00.net/2" },
+      { label: "Зеркало №3 [kangel.tech]", url: "https://internet-tenshi.kangel.tech/1" },
+      { label: "Зеркало №4 [kangel.tech]", url: "https://internet-tenshi.kangel.tech/2" },
+      { label: "Зеркало №5 [github]", url: "https://raw.githubusercontent.com/EtoNeYaProject/etoneyaproject.github.io/refs/heads/main/1" },
+      { label: "Зеркало №6 [github]", url: "https://raw.githubusercontent.com/EtoNeYaProject/etoneyaproject.github.io/refs/heads/main/2" },
+      { label: "Зеркало №7 [jsdelivr]", url: "https://cdn.jsdelivr.net/gh/EtoNeYaProject/EtoNeYaProject.github.io@refs/heads/main/1" },
+      { label: "Зеркало №8 [yandex]", url: "https://translate.yandex.ru/translate?url=https://etoneya.a9fm.site/1&lang=en-ru" },
+      { label: "Зеркало №9 [gitverse]", url: "https://gitverse.ru/api/repos/nloverx/EtoNeYa_Subs/raw/branch/master/1" },
+      { label: "Зеркало №10 [gitverse]", url: "https://gitverse.ru/api/repos/nloverx/EtoNeYa_Subs/raw/branch/master/2" }
+    ]
+  }
+];
+    const gridContainer = document.getElementById('keysGrid');
+    let html = '';
+
+    subCategories.forEach((cat, index) => {
+      let linksHtml = '';
+      cat.links.forEach(link => {
+        linksHtml += `
+          <button class="key-btn" data-url="${link.url}">
+            <div class="key-label">
+              <span class="key-tag">${link.label}</span>
+              <span class="key-desc mono">Нажмите для копирования</span>
+            </div>
+            <div class="icon-wrapper">
+              <i data-lucide="copy" style="width: 20px; height: 20px;"></i>
+            </div>
+          </button>
+        `;
+      });
+
+      html += `
+        <div class="card" style="animation-delay: ${0.6 + index * 0.1}s">
+          <div class="card-header">
+            <div class="card-icon">
+              <i data-lucide="${cat.icon}"></i>
+            </div>
+            <h3 class="card-title">${cat.title}</h3>
+          </div>
+          <div class="keys-list">
+            ${linksHtml}
+          </div>
+        </div>
+      `;
+    });
+
+    gridContainer.innerHTML = html;
+
+    lucide.createIcons();
+
+    const toastContainer = document.getElementById('toastContainer');
+
+    function showToast(message) {
+      const toast = document.createElement('div');
+      toast.className = 'toast';
+      toast.innerHTML = `<i data-lucide="check-circle-2"></i> <span>${message}</span>`;
+
+      toastContainer.appendChild(toast);
+      lucide.createIcons({ root: toast });
+
+      setTimeout(() => {
+        toast.classList.add('hide');
+        toast.addEventListener('animationend', () => toast.remove());
+      }, 3000);
+    }
+
+    document.querySelectorAll('.key-btn').forEach(btn => {
+      btn.addEventListener('click', async function () {
+        const url = this.getAttribute('data-url');
+        const iconWrapper = this.querySelector('.icon-wrapper');
+
+        try {
+          await navigator.clipboard.writeText(url);
+          this.classList.add('success');
+          iconWrapper.innerHTML = '<i data-lucide="check" style="width: 20px; height: 20px;"></i>';
+          lucide.createIcons({ root: iconWrapper });
+
+          showToast('Ключ успешно скопирован!');
+
+          setTimeout(() => {
+            this.classList.remove('success');
+            iconWrapper.innerHTML = '<i data-lucide="copy" style="width: 20px; height: 20px;"></i>';
+            lucide.createIcons({ root: iconWrapper });
+          }, 2000);
+
+        } catch (err) {
+          console.error('Ошибка копирования', err);
+          alert('Не удалось скопировать. Пожалуйста, скопируйте вручную: ' + url);
+        }
+      });
+    });
+
+    const devModal = document.getElementById('devModal');
+    const openDevModal = document.getElementById('openDevModal');
+    const closeModal = document.getElementById('closeModal');
+    openDevModal.addEventListener('click', (e) => {
+      e.preventDefault();
+      devModal.classList.add('active');
+    });
+
+    closeModal.addEventListener('click', () => {
+      devModal.classList.remove('active');
+    });
+    devModal.addEventListener('click', (e) => {
+      if (e.target === devModal) {
+        devModal.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+
+</html>
