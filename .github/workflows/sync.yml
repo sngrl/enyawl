@@ -1,4 +1,4 @@
-name: Sync from upstream
+name: Sync main from upstream
 
 on:
   schedule:
@@ -12,6 +12,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
+          ref: main
           token: ${{ secrets.MIRROR_TOKEN }}
           fetch-depth: 0
 
