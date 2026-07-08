@@ -1,0 +1,134 @@
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: warning
+proxies:
+- name: '0853 | 🇩🇪 Germany | SS | 🔉 YTM | 📺 YT | TG: @YoutubeUnBlockRu'
+  type: ss
+  server: 8.209.74.72
+  port: 20001
+  cipher: chacha20-ietf-poly1305
+  password: PWpjPo3tqhPN4yRZ
+  udp: true
+proxy-groups:
+- name: 🚫 Недоступные сайты
+  type: select
+  icon: https://raw.githubusercontent.com/ArThirtyFour/NeedyWebUI/refs/heads/main/icons/Icon%20Emotes/Internet.png
+  proxies:
+  - 🎲 Любой доступный сервер
+  - '0853 | 🇩🇪 Germany | SS | 🔉 YTM | 📺 YT | TG: @YoutubeUnBlockRu'
+- name: 🎲 Торренты
+  type: select
+  icon: https://raw.githubusercontent.com/ArThirtyFour/NeedyWebUI/refs/heads/main/icons/Achivement/Comment%20te%20dire%20adieu.png
+  proxies:
+  - DIRECT
+- name: 🇷🇺 RU сайты
+  type: select
+  icon: https://raw.githubusercontent.com/ArThirtyFour/NeedyWebUI/refs/heads/main/icons/Achivement/(Un)happy%20End%20World.png
+  proxies:
+  - DIRECT
+- name: 🎲 Любой доступный сервер
+  type: fallback
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  hidden: true
+  lazy: true
+  proxies:
+  - '0853 | 🇩🇪 Germany | SS | 🔉 YTM | 📺 YT | TG: @YoutubeUnBlockRu'
+- name: PROXY
+  type: select
+  hidden: true
+  proxies:
+  - 🚫 Недоступные сайты
+  - '0853 | 🇩🇪 Germany | SS | 🔉 YTM | 📺 YT | TG: @YoutubeUnBlockRu'
+rule-providers:
+  ru-bundle:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/legiz-ru/mihomo-rule-sets/main/ru-bundle/rule.mrs
+    path: ./ru-bundle/rule.mrs
+    interval: 86400
+  rknasnblock:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    url: https://raw.githubusercontent.com/legiz-ru/mihomo-rule-sets/main/ru-bundle/rknasnblock.mrs
+    path: ./ru-bundle/rknasnblock.mrs
+    interval: 86400
+  refilter-domains:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/legiz-ru/mihomo-rule-sets/main/re-filter/domain-rule.mrs
+    path: ./re-filter/domain-rule.mrs
+    interval: 86400
+  refilter-ips:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    url: https://raw.githubusercontent.com/legiz-ru/mihomo-rule-sets/main/re-filter/ip-rule.mrs
+    path: ./re-filter/ip-rule.mrs
+    interval: 86400
+  oisd-small:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/legiz-ru/mihomo-rule-sets/main/oisd/small.mrs
+    path: ./oisd/small.mrs
+    interval: 86400
+  torrent-trackers:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/legiz-ru/mihomo-rule-sets/main/other/torrent-trackers.mrs
+    path: ./torrent-trackers.mrs
+    interval: 86400
+  torrent-clients:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/legiz-ru/mihomo-rule-sets/main/other/torrent-clients.yaml
+    path: ./torrent-clients.yaml
+    interval: 86400
+  games-direct:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/legiz-ru/mihomo-rule-sets/main/other/games-direct.yaml
+    path: ./games-direct.yaml
+    interval: 86400
+  geosite-ru:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ru.mrs
+    path: ./geosite-ru.mrs
+    interval: 86400
+  geoip-for-ru:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    url: https://raw.githubusercontent.com/Davoyan/mihomo-rule-sets/main/ip-for-ru/lists/ips-for-ru.mrs
+    path: ./geoip-for-ru.mrs
+    interval: 86400
+  ru-apps:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/legiz-ru/mihomo-rule-sets/main/other/ru-app-list.yaml
+    path: ./ru-apps.yaml
+    interval: 86400
+rules:
+- RULE-SET,oisd-small,REJECT
+- RULE-SET,torrent-clients,🎲 Торренты
+- RULE-SET,torrent-trackers,🎲 Торренты
+- RULE-SET,games-direct,🎲 Торренты
+- RULE-SET,ru-apps,🇷🇺 RU сайты
+- RULE-SET,geosite-ru,🇷🇺 RU сайты
+- RULE-SET,geoip-for-ru,🇷🇺 RU сайты
+- RULE-SET,ru-bundle,🚫 Недоступные сайты
+- RULE-SET,rknasnblock,🚫 Недоступные сайты
+- RULE-SET,refilter-domains,🚫 Недоступные сайты
+- RULE-SET,refilter-ips,🚫 Недоступные сайты
+- MATCH,🚫 Недоступные сайты
