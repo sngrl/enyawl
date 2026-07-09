@@ -16,7 +16,16 @@ proxies:
   client-fingerprint: firefox
   servername: cloud.mail.ru
   flow: xtls-rprx-vision
-- name: '1160 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-MAILRU | VLESS | TG: @YoutubeUnBlockRu'
+- name: '0622 | 🇷🇺 Russia | 🏳️ CIDR-IHC | VLESS | TG: @YoutubeUnBlockRu'
+  type: vless
+  server: 185.22.234.32
+  port: 7443
+  uuid: 57c77d07-bec3-4bf7-9b72-70ece40450f6
+  udp: true
+  tls: true
+  network: ws
+  servername: mms-2.hysteria.ltd
+- name: '1167 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-MAILRU | VLESS | TG: @YoutubeUnBlockRu'
   type: vless
   server: 188.68.218.101
   port: 443
@@ -26,7 +35,7 @@ proxies:
   client-fingerprint: qq
   servername: cloud.mail.ru
   flow: xtls-rprx-vision
-- name: '1398 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-Yandex | VLESS | TG: @YoutubeUnBlockRu'
+- name: '1406 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-Yandex | VLESS | TG: @YoutubeUnBlockRu'
   type: vless
   server: 92.53.74.129
   port: 443
@@ -125,8 +134,9 @@ proxy-groups:
   proxies:
   - ⚡️ Авто
   - '0304 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | VLESS | TG: @YoutubeUnBlockRu'
-  - '1160 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-MAILRU | VLESS | TG: @YoutubeUnBlockRu'
-  - '1398 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-Yandex | VLESS | TG: @YoutubeUnBlockRu'
+  - '0622 | 🇷🇺 Russia | 🏳️ CIDR-IHC | VLESS | TG: @YoutubeUnBlockRu'
+  - '1167 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-MAILRU | VLESS | TG: @YoutubeUnBlockRu'
+  - '1406 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-Yandex | VLESS | TG: @YoutubeUnBlockRu'
 - name: 📺 Youtube
   type: select
   hidden: true
