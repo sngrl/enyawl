@@ -6,7 +6,7 @@ ipv6: true
 unified-delay: true
 tcp-concurrent: true
 proxies:
-- name: '0005 | 🇬🇧 United Kingdom | VMESS | 📺 YT | TG: @YoutubeUnBlockRu'
+- name: '0006 | 🇬🇧 United Kingdom | VMESS | 📺 YT | TG: @YoutubeUnBlockRu'
   type: vmess
   server: 57.129.132.223
   port: 80
@@ -20,7 +20,7 @@ proxies:
   ws-opts:
     path: /vmess/
     headers: {}
-- name: '0049 | 🇹🇷 Turkey | VMESS | 📺 YT | TG: @YoutubeUnBlockRu'
+- name: '0050 | 🇹🇷 Turkey | VMESS | 📺 YT | TG: @YoutubeUnBlockRu'
   type: vmess
   server: 155.103.71.163
   port: 2026
@@ -29,7 +29,7 @@ proxies:
   cipher: auto
   udp: true
   tls: false
-- name: '0299 | 🇪🇸 Spain | VMESS | 📺 YT | TG: @YoutubeUnBlockRu'
+- name: '0304 | 🇪🇸 Spain | VMESS | 📺 YT | TG: @YoutubeUnBlockRu'
   type: vmess
   server: 85.90.217.42
   port: 22324
@@ -38,7 +38,7 @@ proxies:
   cipher: auto
   udp: true
   tls: false
-- name: '0359 | 🇺🇸 USA | VMESS | 📺 YT | TG: @YoutubeUnBlockRu'
+- name: '0364 | 🇺🇸 USA | VMESS | 📺 YT | TG: @YoutubeUnBlockRu'
   type: vmess
   server: 169.197.142.22
   port: 18000
@@ -47,7 +47,7 @@ proxies:
   cipher: auto
   udp: true
   tls: false
-- name: '0574 | 🇺🇸 USA | VMESS | 📺 YT | TG: @YoutubeUnBlockRu'
+- name: '0579 | 🇺🇸 USA | VMESS | 📺 YT | TG: @YoutubeUnBlockRu'
   type: vmess
   server: 165.140.216.142
   port: 443
@@ -56,11 +56,20 @@ proxies:
   cipher: auto
   udp: true
   tls: false
-- name: '0707 | 🇨🇦 Canada | VMESS | 📺 YT | TG: @YoutubeUnBlockRu'
+- name: '0714 | 🇨🇦 Canada | VMESS | 📺 YT | TG: @YoutubeUnBlockRu'
   type: vmess
   server: 23.162.200.198
   port: 18000
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+- name: '0747 | 🇳🇱 Netherlands | VMESS | 📺 YT | TG: @YoutubeUnBlockRu'
+  type: vmess
+  server: 94.103.167.116
+  port: 80
+  uuid: d1b0c103-a7ff-4bd6-887d-a73d6ebf1f50
   alterId: 0
   cipher: auto
   udp: true
@@ -149,12 +158,13 @@ proxy-groups:
   hidden: true
   proxies:
   - ⚡️ Авто
-  - '0005 | 🇬🇧 United Kingdom | VMESS | 📺 YT | TG: @YoutubeUnBlockRu'
-  - '0049 | 🇹🇷 Turkey | VMESS | 📺 YT | TG: @YoutubeUnBlockRu'
-  - '0299 | 🇪🇸 Spain | VMESS | 📺 YT | TG: @YoutubeUnBlockRu'
-  - '0359 | 🇺🇸 USA | VMESS | 📺 YT | TG: @YoutubeUnBlockRu'
-  - '0574 | 🇺🇸 USA | VMESS | 📺 YT | TG: @YoutubeUnBlockRu'
-  - '0707 | 🇨🇦 Canada | VMESS | 📺 YT | TG: @YoutubeUnBlockRu'
+  - '0006 | 🇬🇧 United Kingdom | VMESS | 📺 YT | TG: @YoutubeUnBlockRu'
+  - '0050 | 🇹🇷 Turkey | VMESS | 📺 YT | TG: @YoutubeUnBlockRu'
+  - '0304 | 🇪🇸 Spain | VMESS | 📺 YT | TG: @YoutubeUnBlockRu'
+  - '0364 | 🇺🇸 USA | VMESS | 📺 YT | TG: @YoutubeUnBlockRu'
+  - '0579 | 🇺🇸 USA | VMESS | 📺 YT | TG: @YoutubeUnBlockRu'
+  - '0714 | 🇨🇦 Canada | VMESS | 📺 YT | TG: @YoutubeUnBlockRu'
+  - '0747 | 🇳🇱 Netherlands | VMESS | 📺 YT | TG: @YoutubeUnBlockRu'
 - name: 📺 Youtube
   type: select
   hidden: true
