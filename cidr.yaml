@@ -6,31 +6,7 @@ ipv6: true
 unified-delay: true
 tcp-concurrent: true
 proxies:
-- name: '0073 | 🇷🇺 Russia | 🏳️ CIDR-Yandex | 🏳️ SNI-Yandex | VLESS | TG: @YoutubeUnBlockRu'
-  type: vless
-  server: 158.160.198.58
-  port: 443
-  uuid: 596b215c-3743-4893-b24a-4e396c4ab80f
-  udp: true
-  tls: true
-  reality-opts:
-    public-key: DQW3GuEvmRgUQnnKdHjSZhgaEDcu_07Ijuqibd72-0I
-    short-id: ca7dd27a72c7c203
-    support-x25519mlkem768: true
-  client-fingerprint: chrome
-  servername: api-maps.yandex.ru
-- name: '0139 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-MAILRU | VLESS | TG: @YoutubeUnBlockRu'
-  type: vless
-  server: 188.68.218.101
-  port: 443
-  uuid: 967b2fad-bb2a-46d1-8efb-3bfda81f7f92
-  udp: true
-  tls: true
-  network: raw
-  client-fingerprint: qq
-  servername: cloud.mail.ru
-  flow: xtls-rprx-vision
-- name: '0200 | 🇷🇺 Russia | 🏳️ CIDR-OLD | VLESS | TG: @YoutubeUnBlockRu'
+- name: '0129 | 🇷🇺 Russia | 🏳️ CIDR-OLD | VLESS | TG: @YoutubeUnBlockRu'
   type: vless
   server: 51.250.29.180
   port: 443
@@ -42,18 +18,7 @@ proxies:
   servername: 5post-gate.x5.ru
   grpc-opts:
     grpc-service-name: grpc
-- name: '0209 | 🇷🇺 Russia | 🏳️ CIDR-VK | 🏳️ SNI-MAX | VLESS | TG: @YoutubeUnBlockRu'
-  type: vless
-  server: 89.208.230.241
-  port: 5443
-  uuid: 1e06c388-d31c-420e-916a-94a990648e34
-  udp: true
-  tls: true
-  network: raw
-  client-fingerprint: qq
-  servername: max.ru
-  flow: xtls-rprx-vision
-- name: '0480 | 🇷🇺 Russia | 🏳️ CIDR-OLD | VLESS | TG: @YoutubeUnBlockRu'
+- name: '0304 | 🇷🇺 Russia | 🏳️ CIDR-OLD | VLESS | TG: @YoutubeUnBlockRu'
   type: vless
   server: 51.250.29.180
   port: 443
@@ -149,11 +114,8 @@ proxy-groups:
   hidden: true
   proxies:
   - ⚡️ Авто
-  - '0073 | 🇷🇺 Russia | 🏳️ CIDR-Yandex | 🏳️ SNI-Yandex | VLESS | TG: @YoutubeUnBlockRu'
-  - '0139 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-MAILRU | VLESS | TG: @YoutubeUnBlockRu'
-  - '0200 | 🇷🇺 Russia | 🏳️ CIDR-OLD | VLESS | TG: @YoutubeUnBlockRu'
-  - '0209 | 🇷🇺 Russia | 🏳️ CIDR-VK | 🏳️ SNI-MAX | VLESS | TG: @YoutubeUnBlockRu'
-  - '0480 | 🇷🇺 Russia | 🏳️ CIDR-OLD | VLESS | TG: @YoutubeUnBlockRu'
+  - '0129 | 🇷🇺 Russia | 🏳️ CIDR-OLD | VLESS | TG: @YoutubeUnBlockRu'
+  - '0304 | 🇷🇺 Russia | 🏳️ CIDR-OLD | VLESS | TG: @YoutubeUnBlockRu'
 - name: 📺 Youtube
   type: select
   hidden: true
