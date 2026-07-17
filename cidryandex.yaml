@@ -6,19 +6,50 @@ ipv6: true
 unified-delay: true
 tcp-concurrent: true
 proxies:
-- name: '0073 | 🇷🇺 Russia | 🏳️ CIDR-Yandex | 🏳️ SNI-Yandex | VLESS | TG: @YoutubeUnBlockRu'
+- name: '0214 | 🇷🇺 Russia | 🏳️ CIDR-Yandex | VLESS | TG: @YoutubeUnBlockRu'
   type: vless
-  server: 158.160.198.58
+  server: 158.160.191.91
   port: 443
-  uuid: 596b215c-3743-4893-b24a-4e396c4ab80f
+  uuid: a5ea9247-79f3-4655-aece-3fb51e1e669e
   udp: true
   tls: true
   reality-opts:
-    public-key: DQW3GuEvmRgUQnnKdHjSZhgaEDcu_07Ijuqibd72-0I
-    short-id: ca7dd27a72c7c203
+    public-key: 6QIHdF1dvSK8mDPOeWXvGIqJmZ2ySq5fyc7N15h1WFE
+    short-id: 34256b39b4ebb864
     support-x25519mlkem768: true
   client-fingerprint: chrome
-  servername: api-maps.yandex.ru
+  servername: rezerv8.yunus.guru
+  flow: xtls-rprx-vision
+- name: '1789 | 🇷🇺 Russia | 🏳️ CIDR-Yandex | VLESS | TG: @YoutubeUnBlockRu'
+  type: vless
+  server: 158.160.191.91
+  port: 443
+  uuid: a5ea9247-79f3-4655-aece-3fb51e1e669e
+  udp: true
+  tls: true
+  network: raw
+  reality-opts:
+    public-key: 6QIHdF1dvSK8mDPOeWXvGIqJmZ2ySq5fyc7N15h1WFE
+    short-id: 34256b39b4ebb864
+    support-x25519mlkem768: true
+  client-fingerprint: chrome
+  servername: rezerv8.yunus.guru
+  flow: xtls-rprx-vision
+- name: '2057 | 🇷🇺 Russia | 🏳️ CIDR-Yandex | VLESS | TG: @YoutubeUnBlockRu'
+  type: vless
+  server: 158.160.191.91
+  port: 443
+  uuid: a5ea9247-79f3-4655-aece-3fb51e1e669e
+  udp: true
+  tls: true
+  network: raw
+  reality-opts:
+    public-key: 6QIHdF1dvSK8mDPOeWXvGIqJmZ2ySq5fyc7N15h1WFE
+    short-id: 34256b39b4ebb864
+    support-x25519mlkem768: true
+  client-fingerprint: qq
+  servername: rezerv8.yunus.guru
+  flow: xtls-rprx-vision
 tun:
   enable: true
   stack: system
@@ -103,7 +134,9 @@ proxy-groups:
   hidden: true
   proxies:
   - ⚡️ Авто
-  - '0073 | 🇷🇺 Russia | 🏳️ CIDR-Yandex | 🏳️ SNI-Yandex | VLESS | TG: @YoutubeUnBlockRu'
+  - '0214 | 🇷🇺 Russia | 🏳️ CIDR-Yandex | VLESS | TG: @YoutubeUnBlockRu'
+  - '1789 | 🇷🇺 Russia | 🏳️ CIDR-Yandex | VLESS | TG: @YoutubeUnBlockRu'
+  - '2057 | 🇷🇺 Russia | 🏳️ CIDR-Yandex | VLESS | TG: @YoutubeUnBlockRu'
 - name: 📺 Youtube
   type: select
   hidden: true
