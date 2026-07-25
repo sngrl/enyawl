@@ -6,33 +6,45 @@ ipv6: true
 unified-delay: true
 tcp-concurrent: true
 proxies:
-- name: '1181 | 🇷🇺 Russia | 🏳️ CIDR-Yandex | VLESS | TG: @YoutubeUnBlockRu'
+- name: '1482 | 🇷🇺 Russia | 🏳️ CIDR-Yandex | 🏳️ SNI-X5 | VLESS | TG: @YoutubeUnBlockRu'
   type: vless
-  server: 84.201.162.99
-  port: 49958
-  uuid: 6855c0ad-e259-4180-a6b8-776efdfbbcea
+  server: 84.201.170.185
+  port: 52006
+  uuid: 9b0bd469-070e-5e5e-8483-f8d24e256bbe
   udp: true
   tls: true
   network: raw
   reality-opts:
-    public-key: wwIAlV04ehfHxXiYZtCum2uKRU5mXK2uQ0bL_2_R8mE
-    short-id: 83e911b88e14
+    public-key: DaIRouGSxxQDEv9WKRxD79b2Vt0fsw4yQOTeAmXUYCM
+    short-id: '08'
     support-x25519mlkem768: true
   client-fingerprint: firefox
-  servername: www.nvidia.com
-- name: '1924 | 🇷🇺 Russia | 🏳️ CIDR-Yandex | 🏳️ SNI-Yandex | VLESS | TG: @YoutubeUnBlockRu'
+  servername: ads.x5.ru
+  flow: xtls-rprx-vision
+- name: '2817 | 🇷🇺 Russia | 🏳️ CIDR-Yandex | VLESS | TG: @YoutubeUnBlockRu'
   type: vless
-  server: 158.160.22.195
+  server: 84.201.165.239
   port: 443
-  uuid: d8016f57-b34f-41ea-aca4-ce0d4131d980
+  uuid: 6c76b874-2273-56cf-8ba2-1b387e85af7c
+  udp: true
+  tls: true
+  network: raw
+  client-fingerprint: ios
+  servername: api-maps.yandex.ru
+  flow: xtls-rprx-vision
+- name: '2968 | 🇷🇺 Russia | 🏳️ CIDR-Yandex | VLESS | TG: @YoutubeUnBlockRu'
+  type: vless
+  server: 158.160.196.250
+  port: 443
+  uuid: 22d3aba0-0079-4f52-b8b9-9ebe39de9270
   udp: true
   tls: true
   reality-opts:
-    public-key: 9tKfmbONYzchVLBVki3UDOBgulMw2-_9fV5qm4aPiiM
-    short-id: 700e5b8399d12d
+    public-key: mdb9oT5vHeItx8PzikhfKOKhsNWCLT6JqGm99vk7hzU
+    short-id: 5ea6eaa2c965253e
     support-x25519mlkem768: true
-  client-fingerprint: firefox
-  servername: ya.ru
+  client-fingerprint: edge
+  servername: d3cdn9.cloud-cdn.xyz
   flow: xtls-rprx-vision
 tun:
   enable: true
@@ -118,8 +130,9 @@ proxy-groups:
   hidden: true
   proxies:
   - ⚡️ Авто
-  - '1181 | 🇷🇺 Russia | 🏳️ CIDR-Yandex | VLESS | TG: @YoutubeUnBlockRu'
-  - '1924 | 🇷🇺 Russia | 🏳️ CIDR-Yandex | 🏳️ SNI-Yandex | VLESS | TG: @YoutubeUnBlockRu'
+  - '1482 | 🇷🇺 Russia | 🏳️ CIDR-Yandex | 🏳️ SNI-X5 | VLESS | TG: @YoutubeUnBlockRu'
+  - '2817 | 🇷🇺 Russia | 🏳️ CIDR-Yandex | VLESS | TG: @YoutubeUnBlockRu'
+  - '2968 | 🇷🇺 Russia | 🏳️ CIDR-Yandex | VLESS | TG: @YoutubeUnBlockRu'
 - name: 📺 Youtube
   type: select
   hidden: true
