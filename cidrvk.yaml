@@ -6,7 +6,37 @@ ipv6: true
 unified-delay: true
 tcp-concurrent: true
 proxies:
-- name: '1797 | 🌐 Unknown | 🏳️ CIDR-VK | 🏳️ SNI-MAX | VLESS | TG: @YoutubeUnBlockRu'
+- name: '3397 | 🇷🇺 Russia | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
+  type: vless
+  server: 89.208.231.229
+  port: 2053
+  uuid: 96006428-88d4-11f1-9ca5-1e6febe3e1df
+  udp: true
+  tls: true
+  network: grpc
+  reality-opts:
+    public-key: WUY8Lb4LfUUKLzZK3oSlRAdoy-Iu0w3Ait1-jtxbW1M
+    short-id: 5b9dc5fe4ad87cc2
+    support-x25519mlkem768: true
+  client-fingerprint: firefox
+  servername: hh.ru
+  grpc-opts:
+    grpc-service-name: grpc-direct
+- name: '3440 | 🌐 Unknown | 🏳️ CIDR-VK | 🏳️ SNI-MAX | VLESS | TG: @YoutubeUnBlockRu'
+  type: vless
+  server: 95sub.ghost-lan.com
+  port: 8442
+  uuid: 873f1046-0210-4b2e-a0ec-dc1826886071
+  udp: true
+  tls: true
+  reality-opts:
+    public-key: TRB-7JE8MNZDBFSduYp9syU1AdpLez1MJ7dPrHeGFwg
+    short-id: a7f9106ba66e4796
+    support-x25519mlkem768: true
+  client-fingerprint: firefox
+  servername: max.ru
+  flow: xtls-rprx-vision
+- name: '3800 | 🌐 Unknown | 🏳️ CIDR-VK | 🏳️ SNI-MAX | VLESS | TG: @YoutubeUnBlockRu'
   type: vless
   server: 95sub.ghost-lan.com
   port: 8442
@@ -20,7 +50,7 @@ proxies:
   client-fingerprint: chrome
   servername: max.ru
   flow: xtls-rprx-vision
-- name: '2000 | 🇷🇺 Russia | 🏳️ CIDR-VK | 🏳️ SNI-MAX | VLESS | TG: @YoutubeUnBlockRu'
+- name: '3935 | 🇷🇺 Russia | 🏳️ CIDR-VK | 🏳️ SNI-MAX | VLESS | TG: @YoutubeUnBlockRu'
   type: vless
   server: 95.163.250.241
   port: 8442
@@ -33,20 +63,6 @@ proxies:
     short-id: a7f9106ba66e4796
     support-x25519mlkem768: true
   client-fingerprint: ios
-  servername: max.ru
-  flow: xtls-rprx-vision
-- name: '4259 | 🌐 Unknown | 🏳️ CIDR-VK | 🏳️ SNI-MAX | VLESS | TG: @YoutubeUnBlockRu'
-  type: vless
-  server: 95sub.ghost-lan.com
-  port: 8442
-  uuid: 873f1046-0210-4b2e-a0ec-dc1826886071
-  udp: true
-  tls: true
-  reality-opts:
-    public-key: TRB-7JE8MNZDBFSduYp9syU1AdpLez1MJ7dPrHeGFwg
-    short-id: a7f9106ba66e4796
-    support-x25519mlkem768: true
-  client-fingerprint: firefox
   servername: max.ru
   flow: xtls-rprx-vision
 tun:
@@ -133,9 +149,10 @@ proxy-groups:
   hidden: true
   proxies:
   - ⚡️ Авто
-  - '1797 | 🌐 Unknown | 🏳️ CIDR-VK | 🏳️ SNI-MAX | VLESS | TG: @YoutubeUnBlockRu'
-  - '2000 | 🇷🇺 Russia | 🏳️ CIDR-VK | 🏳️ SNI-MAX | VLESS | TG: @YoutubeUnBlockRu'
-  - '4259 | 🌐 Unknown | 🏳️ CIDR-VK | 🏳️ SNI-MAX | VLESS | TG: @YoutubeUnBlockRu'
+  - '3397 | 🇷🇺 Russia | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
+  - '3440 | 🌐 Unknown | 🏳️ CIDR-VK | 🏳️ SNI-MAX | VLESS | TG: @YoutubeUnBlockRu'
+  - '3800 | 🌐 Unknown | 🏳️ CIDR-VK | 🏳️ SNI-MAX | VLESS | TG: @YoutubeUnBlockRu'
+  - '3935 | 🇷🇺 Russia | 🏳️ CIDR-VK | 🏳️ SNI-MAX | VLESS | TG: @YoutubeUnBlockRu'
 - name: 📺 Youtube
   type: select
   hidden: true
@@ -157,23 +174,23 @@ proxy-groups:
   - 🛡️ VPN
 - name: 🚫 Заблокированные сайты
   type: select
-  icon: https://raw.githubusercontent.com/ArThirtyFour/NeedyWebUI/refs/heads/main/icons/Icon%20Emotes/Internet.png
+  icon: https://raw.githubusercontent.com/ArThirtyFour/NeedyWebUI/refs/heads/main/icons/ui_emotes/internet.png
   include-all: true
   proxies:
   - 🛡️ VPN
 - name: 🇷🇺 RU сайты
   type: select
-  icon: https://raw.githubusercontent.com/ArThirtyFour/NeedyWebUI/refs/heads/main/icons/Achivement/Comment%20te%20dire%20adieu.png
+  icon: https://raw.githubusercontent.com/ArThirtyFour/NeedyWebUI/refs/heads/main/icons/achivement/comment-te-dire-adieu.png
   proxies:
   - DIRECT
 - name: 🎲 Торренты
   type: select
-  icon: https://raw.githubusercontent.com/ArThirtyFour/NeedyWebUI/refs/heads/main/icons/Achivement/Comment%20te%20dire%20adieu.png
+  icon: https://raw.githubusercontent.com/ArThirtyFour/NeedyWebUI/refs/heads/main/icons/achivement/comment-te-dire-adieu.png
   proxies:
   - DIRECT
 - name: 🌍 Остальное
   type: select
-  icon: https://raw.githubusercontent.com/ArThirtyFour/NeedyWebUI/refs/heads/main/icons/Achivement/(Un)happy%20End%20World.png
+  icon: https://raw.githubusercontent.com/ArThirtyFour/NeedyWebUI/refs/heads/main/icons/achivement/unhappy-end-world.png
   include-all: true
   proxies:
   - 🛡️ VPN
