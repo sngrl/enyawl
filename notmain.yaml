@@ -8,13 +8,19 @@ tcp-concurrent: true
 proxies:
 - name: https://t.me/YoutubeUnBlockRu
   type: vless
-  server: 188.72.103.3
+  server: 51.250.82.165
   port: 443
-  uuid: 1be862cf-89a3-49f8-bcaa-40420bf10ba0
+  uuid: 15e0833c-08ad-47f3-bf80-60c2a47a6774
   udp: true
   tls: true
-  network: xhttp
-  servername: worldstream.club
+  network: raw
+  reality-opts:
+    public-key: KEZ93Y9VgoirI18wIpcfS3z8I9GiaiFe-GKqGdEPMmg
+    short-id: 4e07408562be
+    support-x25519mlkem768: true
+  client-fingerprint: safari
+  servername: api-maps.yandex.ru
+  flow: xtls-rprx-vision
 tun:
   enable: true
   stack: system
@@ -121,23 +127,23 @@ proxy-groups:
   - 🛡️ VPN
 - name: 🚫 Заблокированные сайты
   type: select
-  icon: https://raw.githubusercontent.com/ArThirtyFour/NeedyWebUI/refs/heads/main/icons/Icon%20Emotes/Internet.png
+  icon: https://raw.githubusercontent.com/ArThirtyFour/NeedyWebUI/refs/heads/main/icons/ui_emotes/internet.png
   include-all: true
   proxies:
   - 🛡️ VPN
 - name: 🇷🇺 RU сайты
   type: select
-  icon: https://raw.githubusercontent.com/ArThirtyFour/NeedyWebUI/refs/heads/main/icons/Achivement/Comment%20te%20dire%20adieu.png
+  icon: https://raw.githubusercontent.com/ArThirtyFour/NeedyWebUI/refs/heads/main/icons/achivement/comment-te-dire-adieu.png
   proxies:
   - DIRECT
 - name: 🎲 Торренты
   type: select
-  icon: https://raw.githubusercontent.com/ArThirtyFour/NeedyWebUI/refs/heads/main/icons/Achivement/Comment%20te%20dire%20adieu.png
+  icon: https://raw.githubusercontent.com/ArThirtyFour/NeedyWebUI/refs/heads/main/icons/achivement/comment-te-dire-adieu.png
   proxies:
   - DIRECT
 - name: 🌍 Остальное
   type: select
-  icon: https://raw.githubusercontent.com/ArThirtyFour/NeedyWebUI/refs/heads/main/icons/Achivement/(Un)happy%20End%20World.png
+  icon: https://raw.githubusercontent.com/ArThirtyFour/NeedyWebUI/refs/heads/main/icons/achivement/unhappy-end-world.png
   include-all: true
   proxies:
   - 🛡️ VPN
