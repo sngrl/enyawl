@@ -8,19 +8,13 @@ tcp-concurrent: true
 proxies:
 - name: https://t.me/YoutubeUnBlockRu
   type: vless
-  server: 51.250.82.165
+  server: love.ns.cloudflare.com
   port: 443
-  uuid: 15e0833c-08ad-47f3-bf80-60c2a47a6774
+  uuid: 8ad6f598-cd8d-4fca-848e-05fc9be15ff3
   udp: true
   tls: true
-  network: raw
-  reality-opts:
-    public-key: KEZ93Y9VgoirI18wIpcfS3z8I9GiaiFe-GKqGdEPMmg
-    short-id: 4e07408562be
-    support-x25519mlkem768: true
-  client-fingerprint: safari
-  servername: api-maps.yandex.ru
-  flow: xtls-rprx-vision
+  network: ws
+  servername: fosae.starriverway-milo.sbs
 tun:
   enable: true
   stack: system
