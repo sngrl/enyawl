@@ -8,14 +8,13 @@ tcp-concurrent: true
 proxies:
 - name: https://t.me/YoutubeUnBlockRu
   type: vless
-  server: 94.139.251.191
-  port: 443
-  uuid: 64b6f905-94d5-4745-8f92-cafa107b7c16
+  server: 172.64.80.1
+  port: 8443
+  uuid: 304a1e62-eb26-4b44-994e-b96a70fff9b4
   udp: true
   tls: true
-  client-fingerprint: qq
-  servername: apple.com
-  flow: xtls-rprx-vision
+  network: ws
+  servername: ad-013.pixel9xdmq.info
 tun:
   enable: true
   stack: system
