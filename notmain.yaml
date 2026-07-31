@@ -8,13 +8,14 @@ tcp-concurrent: true
 proxies:
 - name: https://t.me/YoutubeUnBlockRu
   type: vless
-  server: love.ns.cloudflare.com
+  server: 94.139.251.191
   port: 443
-  uuid: 8ad6f598-cd8d-4fca-848e-05fc9be15ff3
+  uuid: 64b6f905-94d5-4745-8f92-cafa107b7c16
   udp: true
   tls: true
-  network: ws
-  servername: pmebk.darkfield-dr.sbs
+  client-fingerprint: qq
+  servername: apple.com
+  flow: xtls-rprx-vision
 tun:
   enable: true
   stack: system
