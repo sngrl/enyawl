@@ -6,7 +6,7 @@ ipv6: true
 unified-delay: true
 tcp-concurrent: true
 proxies:
-- name: '1080 | 🇷🇺 Russia | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
+- name: '1220 | 🇷🇺 Russia | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
   type: vless
   server: 217.16.29.32
   port: 27522
@@ -22,7 +22,7 @@ proxies:
   servername: m1.vk.com
   grpc-opts:
     grpc-service-name: grpc
-- name: '2629 | 🇷🇺 Russia | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
+- name: '2965 | 🇷🇺 Russia | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
   type: vless
   server: 217.16.29.32
   port: 11759
@@ -37,7 +37,22 @@ proxies:
   client-fingerprint: chrome
   servername: vkontakte.ru
   flow: xtls-rprx-vision
-- name: '6335 | 🇷🇺 Russia | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
+- name: '6614 | 🇷🇺 Russia | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
+  type: vless
+  server: 217.16.29.32
+  port: 11759
+  uuid: fde4bf10-efcf-4ce2-b1f8-a48edb7c118d
+  udp: true
+  tls: true
+  network: raw
+  reality-opts:
+    public-key: MmrNPPrfA5IZ8btrf7dOT-OErPVFqrxUai5KQajaGBs
+    short-id: '36'
+    support-x25519mlkem768: true
+  client-fingerprint: chrome
+  servername: vkontakte.ru
+  flow: xtls-rprx-vision
+- name: '7122 | 🇷🇺 Russia | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
   type: vless
   server: 217.16.29.32
   port: 11759
@@ -135,9 +150,10 @@ proxy-groups:
   hidden: true
   proxies:
   - ⚡️ Авто
-  - '1080 | 🇷🇺 Russia | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
-  - '2629 | 🇷🇺 Russia | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
-  - '6335 | 🇷🇺 Russia | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
+  - '1220 | 🇷🇺 Russia | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
+  - '2965 | 🇷🇺 Russia | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
+  - '6614 | 🇷🇺 Russia | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
+  - '7122 | 🇷🇺 Russia | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
 - name: 📺 Youtube
   type: select
   hidden: true
