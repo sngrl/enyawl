@@ -6,7 +6,7 @@ ipv6: true
 unified-delay: true
 tcp-concurrent: true
 proxies:
-- name: '1563 | 🇷🇺 Russia | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
+- name: '1643 | 🇷🇺 Russia | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
   type: vless
   server: 217.16.29.32
   port: 27522
@@ -22,7 +22,7 @@ proxies:
   servername: m1.vk.com
   grpc-opts:
     grpc-service-name: grpc
-- name: '2066 | 🇷🇺 Russia | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
+- name: '2177 | 🇷🇺 Russia | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
   type: vless
   server: 217.16.29.32
   port: 27522
@@ -38,7 +38,7 @@ proxies:
   servername: m1.vk.com
   grpc-opts:
     grpc-service-name: grpc
-- name: '3992 | 🇷🇺 Russia | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
+- name: '4187 | 🇷🇺 Russia | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
   type: vless
   server: 217.16.29.32
   port: 11759
@@ -52,7 +52,7 @@ proxies:
   client-fingerprint: chrome
   servername: vkontakte.ru
   flow: xtls-rprx-vision
-- name: '4150 | 🌐 Unknown | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
+- name: '4354 | 🌐 Unknown | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
   type: vless
   server: kumpan-cdn.ru
   port: 11759
@@ -66,7 +66,7 @@ proxies:
   client-fingerprint: chrome
   servername: vkontakte.ru
   flow: xtls-rprx-vision
-- name: '5156 | 🇷🇺 Russia | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
+- name: '5418 | 🇷🇺 Russia | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
   type: vless
   server: 217.16.29.32
   port: 11759
@@ -81,6 +81,22 @@ proxies:
   client-fingerprint: chrome
   servername: vkontakte.ru
   flow: xtls-rprx-vision
+- name: '5921 | 🌐 Unknown | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
+  type: vless
+  server: kumpan-cdn.ru
+  port: 27522
+  uuid: fde4bf10-efcf-4ce2-b1f8-a48edb7c118d
+  udp: true
+  tls: true
+  network: grpc
+  reality-opts:
+    public-key: M7VLiYkk3lEwAM012Lc9EXaIJ9lvX_Az6GCb9klTh3c
+    short-id: 0767879bfa
+    support-x25519mlkem768: true
+  client-fingerprint: chrome
+  servername: m1.vk.com
+  grpc-opts:
+    grpc-service-name: grpc
 tun:
   enable: true
   stack: system
@@ -165,11 +181,12 @@ proxy-groups:
   hidden: true
   proxies:
   - ⚡️ Авто
-  - '1563 | 🇷🇺 Russia | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
-  - '2066 | 🇷🇺 Russia | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
-  - '3992 | 🇷🇺 Russia | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
-  - '4150 | 🌐 Unknown | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
-  - '5156 | 🇷🇺 Russia | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
+  - '1643 | 🇷🇺 Russia | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
+  - '2177 | 🇷🇺 Russia | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
+  - '4187 | 🇷🇺 Russia | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
+  - '4354 | 🌐 Unknown | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
+  - '5418 | 🇷🇺 Russia | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
+  - '5921 | 🌐 Unknown | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
 - name: 📺 Youtube
   type: select
   hidden: true
