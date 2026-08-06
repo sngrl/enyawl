@@ -8,13 +8,19 @@ tcp-concurrent: true
 proxies:
 - name: https://t.me/YoutubeUnBlockRu
   type: vless
-  server: 172.64.80.1
-  port: 8443
-  uuid: 901fc0c9-ae4c-4d06-9fed-253b25b68a0e
+  server: 193.168.46.180
+  port: 443
+  uuid: bbd10785-a8cc-43a9-bd48-129d4af92101
   udp: true
   tls: true
-  network: ws
-  servername: ad-004.vector9nmb3.info
+  network: raw
+  reality-opts:
+    public-key: D0FqzTuVSzCF8IcFo64SFIpMsaGV47LW3el2GCCVoFY
+    short-id: c1a7e9b4711d5f60
+    support-x25519mlkem768: true
+  client-fingerprint: qq
+  servername: rruu.persik.host
+  flow: xtls-rprx-vision
 tun:
   enable: true
   stack: system
