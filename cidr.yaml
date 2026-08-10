@@ -6,7 +6,15 @@ ipv6: true
 unified-delay: true
 tcp-concurrent: true
 proxies:
-- name: '1044 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-Yandex | VLESS | TG: @YoutubeUnBlockRu'
+- name: '0513 | 🌐 Unknown | 🏳️ CIDR-Regru | TROJAN | TG: @YoutubeUnBlockRu'
+  type: trojan
+  server: rureg-1-f4f493.atlanta-games.com
+  port: 443
+  password: 4k3Guj9zxn2cJYHDBq3G-BA89ECsPQwF
+  udp: true
+  sni: rureg-1-f4f493.atlanta-games.com
+  skip-cert-verify: false
+- name: '1064 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-Yandex | VLESS | TG: @YoutubeUnBlockRu'
   type: vless
   server: 188.68.218.41
   port: 443
@@ -21,7 +29,7 @@ proxies:
   client-fingerprint: qq
   servername: api-maps.yandex.ru
   flow: xtls-rprx-vision
-- name: '1121 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-VK | VLESS | TG: @YoutubeUnBlockRu'
+- name: '1145 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-VK | VLESS | TG: @YoutubeUnBlockRu'
   type: vless
   server: 188.68.218.41
   port: 443
@@ -36,7 +44,7 @@ proxies:
   client-fingerprint: qq
   servername: m.vk.com
   flow: xtls-rprx-vision
-- name: '2753 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-Yandex | VLESS | TG: @YoutubeUnBlockRu'
+- name: '2812 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-Yandex | VLESS | TG: @YoutubeUnBlockRu'
   type: vless
   server: 188.68.218.41
   port: 443
@@ -50,7 +58,7 @@ proxies:
   client-fingerprint: qq
   servername: api-maps.yandex.ru
   flow: xtls-rprx-vision
-- name: '8701 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-VK | VLESS | TG: @YoutubeUnBlockRu'
+- name: '8926 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-VK | VLESS | TG: @YoutubeUnBlockRu'
   type: vless
   server: 188.68.218.41
   port: 443
@@ -148,10 +156,11 @@ proxy-groups:
   hidden: true
   proxies:
   - ⚡️ Авто
-  - '1044 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-Yandex | VLESS | TG: @YoutubeUnBlockRu'
-  - '1121 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-VK | VLESS | TG: @YoutubeUnBlockRu'
-  - '2753 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-Yandex | VLESS | TG: @YoutubeUnBlockRu'
-  - '8701 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-VK | VLESS | TG: @YoutubeUnBlockRu'
+  - '0513 | 🌐 Unknown | 🏳️ CIDR-Regru | TROJAN | TG: @YoutubeUnBlockRu'
+  - '1064 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-Yandex | VLESS | TG: @YoutubeUnBlockRu'
+  - '1145 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-VK | VLESS | TG: @YoutubeUnBlockRu'
+  - '2812 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-Yandex | VLESS | TG: @YoutubeUnBlockRu'
+  - '8926 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-VK | VLESS | TG: @YoutubeUnBlockRu'
 - name: 📺 Youtube
   type: select
   hidden: true
