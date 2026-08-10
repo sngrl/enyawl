@@ -6,7 +6,7 @@ ipv6: true
 unified-delay: true
 tcp-concurrent: true
 proxies:
-- name: '0530 | 🌐 Unknown | 🏳️ CIDR-Regru | TROJAN | TG: @YoutubeUnBlockRu'
+- name: '0021 | 🌐 Unknown | 🏳️ CIDR-Regru | TROJAN | TG: @YoutubeUnBlockRu'
   type: trojan
   server: rureg-1-f4f493.atlanta-games.com
   port: 443
@@ -14,7 +14,7 @@ proxies:
   udp: true
   sni: rureg-1-f4f493.atlanta-games.com
   skip-cert-verify: false
-- name: '1106 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-Yandex | VLESS | TG: @YoutubeUnBlockRu'
+- name: '0752 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-Yandex | VLESS | TG: @YoutubeUnBlockRu'
   type: vless
   server: 188.68.218.41
   port: 443
@@ -29,7 +29,7 @@ proxies:
   client-fingerprint: qq
   servername: api-maps.yandex.ru
   flow: xtls-rprx-vision
-- name: '1189 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-VK | VLESS | TG: @YoutubeUnBlockRu'
+- name: '1368 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-VK | VLESS | TG: @YoutubeUnBlockRu'
   type: vless
   server: 188.68.218.41
   port: 443
@@ -44,7 +44,25 @@ proxies:
   client-fingerprint: qq
   servername: m.vk.com
   flow: xtls-rprx-vision
-- name: '2927 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-Yandex | VLESS | TG: @YoutubeUnBlockRu'
+- name: '2565 | 🇷🇺 Russia | 🏳️ CIDR-Regru | VLESS | TG: @YoutubeUnBlockRu'
+  type: vless
+  server: 95.163.232.165
+  port: 443
+  uuid: 712d9daa-e5cb-42ed-9ff0-b7a12f095acf
+  udp: true
+  tls: true
+  network: ws
+  servername: cloudflare.vhub.pro
+- name: '3231 | 🇷🇺 Russia | 🏳️ CIDR-Regru | VLESS | TG: @YoutubeUnBlockRu'
+  type: vless
+  server: 95.163.232.165
+  port: 443
+  uuid: 712d9daa-e5cb-42ed-9ff0-b7a12f095acf
+  udp: true
+  tls: true
+  network: ws
+  servername: cloudflare.vhub.pro
+- name: '3308 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-VK | VLESS | TG: @YoutubeUnBlockRu'
   type: vless
   server: 188.68.218.41
   port: 443
@@ -56,9 +74,9 @@ proxies:
     short-id: a9c4f17e3b62d8
     support-x25519mlkem768: true
   client-fingerprint: qq
-  servername: api-maps.yandex.ru
+  servername: m.vk.com
   flow: xtls-rprx-vision
-- name: '8128 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | VLESS | TG: @YoutubeUnBlockRu'
+- name: '3884 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | VLESS | TG: @YoutubeUnBlockRu'
   type: vless
   server: 185.91.52.199
   port: 6443
@@ -74,7 +92,7 @@ proxies:
   servername: play.overcloud.cloud
   grpc-opts:
     grpc-service-name: grpc
-- name: '9318 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-VK | VLESS | TG: @YoutubeUnBlockRu'
+- name: '3951 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-Yandex | VLESS | TG: @YoutubeUnBlockRu'
   type: vless
   server: 188.68.218.41
   port: 443
@@ -86,7 +104,7 @@ proxies:
     short-id: a9c4f17e3b62d8
     support-x25519mlkem768: true
   client-fingerprint: qq
-  servername: m.vk.com
+  servername: api-maps.yandex.ru
   flow: xtls-rprx-vision
 tun:
   enable: true
@@ -172,12 +190,14 @@ proxy-groups:
   hidden: true
   proxies:
   - ⚡️ Авто
-  - '0530 | 🌐 Unknown | 🏳️ CIDR-Regru | TROJAN | TG: @YoutubeUnBlockRu'
-  - '1106 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-Yandex | VLESS | TG: @YoutubeUnBlockRu'
-  - '1189 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-VK | VLESS | TG: @YoutubeUnBlockRu'
-  - '2927 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-Yandex | VLESS | TG: @YoutubeUnBlockRu'
-  - '8128 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | VLESS | TG: @YoutubeUnBlockRu'
-  - '9318 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-VK | VLESS | TG: @YoutubeUnBlockRu'
+  - '0021 | 🌐 Unknown | 🏳️ CIDR-Regru | TROJAN | TG: @YoutubeUnBlockRu'
+  - '0752 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-Yandex | VLESS | TG: @YoutubeUnBlockRu'
+  - '1368 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-VK | VLESS | TG: @YoutubeUnBlockRu'
+  - '2565 | 🇷🇺 Russia | 🏳️ CIDR-Regru | VLESS | TG: @YoutubeUnBlockRu'
+  - '3231 | 🇷🇺 Russia | 🏳️ CIDR-Regru | VLESS | TG: @YoutubeUnBlockRu'
+  - '3308 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-VK | VLESS | TG: @YoutubeUnBlockRu'
+  - '3884 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | VLESS | TG: @YoutubeUnBlockRu'
+  - '3951 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-Yandex | VLESS | TG: @YoutubeUnBlockRu'
 - name: 📺 Youtube
   type: select
   hidden: true
