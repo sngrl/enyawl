@@ -6,16 +6,7 @@ ipv6: true
 unified-delay: true
 tcp-concurrent: true
 proxies:
-- name: '0007 | 🇷🇺 Russia | 🏳️ CIDR-Regru | VLESS | TG: @YoutubeUnBlockRu'
-  type: vless
-  server: 95.163.232.165
-  port: 443
-  uuid: 712d9daa-e5cb-42ed-9ff0-b7a12f095acf
-  udp: true
-  tls: true
-  network: ws
-  servername: cloudflare.vhub.pro
-- name: '2140 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-VK | VLESS | TG: @YoutubeUnBlockRu'
+- name: '0083 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-VK | VLESS | TG: @YoutubeUnBlockRu'
   type: vless
   server: 188.68.218.41
   port: 443
@@ -29,7 +20,7 @@ proxies:
   client-fingerprint: qq
   servername: m.vk.com
   flow: xtls-rprx-vision
-- name: '2519 | 🇷🇺 Russia | 🏳️ CIDR-Regru | VLESS | TG: @YoutubeUnBlockRu'
+- name: '1760 | 🇷🇺 Russia | 🏳️ CIDR-Regru | VLESS | TG: @YoutubeUnBlockRu'
   type: vless
   server: 95.163.232.165
   port: 443
@@ -38,7 +29,16 @@ proxies:
   tls: true
   network: ws
   servername: cloudflare.vhub.pro
-- name: '2748 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | VLESS | TG: @YoutubeUnBlockRu'
+- name: '1943 | 🇷🇺 Russia | 🏳️ CIDR-Regru | VLESS | TG: @YoutubeUnBlockRu'
+  type: vless
+  server: 95.163.232.165
+  port: 443
+  uuid: 712d9daa-e5cb-42ed-9ff0-b7a12f095acf
+  udp: true
+  tls: true
+  network: ws
+  servername: cloudflare.vhub.pro
+- name: '2401 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | VLESS | TG: @YoutubeUnBlockRu'
   type: vless
   server: 185.91.52.199
   port: 6443
@@ -138,10 +138,10 @@ proxy-groups:
   hidden: true
   proxies:
   - ⚡️ Авто
-  - '0007 | 🇷🇺 Russia | 🏳️ CIDR-Regru | VLESS | TG: @YoutubeUnBlockRu'
-  - '2140 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-VK | VLESS | TG: @YoutubeUnBlockRu'
-  - '2519 | 🇷🇺 Russia | 🏳️ CIDR-Regru | VLESS | TG: @YoutubeUnBlockRu'
-  - '2748 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | VLESS | TG: @YoutubeUnBlockRu'
+  - '0083 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | 🏳️ SNI-VK | VLESS | TG: @YoutubeUnBlockRu'
+  - '1760 | 🇷🇺 Russia | 🏳️ CIDR-Regru | VLESS | TG: @YoutubeUnBlockRu'
+  - '1943 | 🇷🇺 Russia | 🏳️ CIDR-Regru | VLESS | TG: @YoutubeUnBlockRu'
+  - '2401 | 🇷🇺 Russia | 🏳️ CIDR-Selectel | VLESS | TG: @YoutubeUnBlockRu'
 - name: 📺 Youtube
   type: select
   hidden: true
