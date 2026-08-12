@@ -6,36 +6,38 @@ ipv6: true
 unified-delay: true
 tcp-concurrent: true
 proxies:
-- name: '0219 | 🌐 Unknown | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
+- name: '1640 | 🇷🇺 Russia | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
   type: vless
-  server: kumpan-cdn.ru
-  port: 27522
-  uuid: fde4bf10-efcf-4ce2-b1f8-a48edb7c118d
+  server: 5.188.140.194
+  port: 2053
+  uuid: 30825d3e-675c-11f1-a103-aef63c7126b0
   udp: true
   tls: true
   network: grpc
   reality-opts:
-    public-key: M7VLiYkk3lEwAM012Lc9EXaIJ9lvX_Az6GCb9klTh3c
-    short-id: 0767879bfa
+    public-key: WUY8Lb4LfUUKLzZK3oSlRAdoy-Iu0w3Ait1-jtxbW1M
+    short-id: 4b685844d0b4f724
     support-x25519mlkem768: true
-  client-fingerprint: chrome
-  servername: m1.vk.com
+  client-fingerprint: firefox
+  servername: hh.ru
   grpc-opts:
-    grpc-service-name: grpc
-- name: '1855 | 🇷🇺 Russia | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
+    grpc-service-name: grpc-direct
+- name: '2491 | 🇷🇺 Russia | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
   type: vless
-  server: 217.16.29.32
-  port: 11759
-  uuid: fde4bf10-efcf-4ce2-b1f8-a48edb7c118d
+  server: 5.188.140.194
+  port: 2053
+  uuid: 30825d3e-675c-11f1-a103-aef63c7126b0
   udp: true
   tls: true
+  network: grpc
   reality-opts:
-    public-key: MmrNPPrfA5IZ8btrf7dOT-OErPVFqrxUai5KQajaGBs
-    short-id: '36'
+    public-key: WUY8Lb4LfUUKLzZK3oSlRAdoy-Iu0w3Ait1-jtxbW1M
+    short-id: 4b685844d0b4f724
     support-x25519mlkem768: true
-  client-fingerprint: chrome
-  servername: vkontakte.ru
-  flow: xtls-rprx-vision
+  client-fingerprint: firefox
+  servername: hh.ru
+  grpc-opts:
+    grpc-service-name: grpc-direct
 tun:
   enable: true
   stack: system
@@ -120,8 +122,8 @@ proxy-groups:
   hidden: true
   proxies:
   - ⚡️ Авто
-  - '0219 | 🌐 Unknown | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
-  - '1855 | 🇷🇺 Russia | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
+  - '1640 | 🇷🇺 Russia | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
+  - '2491 | 🇷🇺 Russia | 🏳️ CIDR-VK | VLESS | TG: @YoutubeUnBlockRu'
 - name: 📺 Youtube
   type: select
   hidden: true
