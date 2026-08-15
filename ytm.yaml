@@ -6,19 +6,26 @@ ipv6: true
 unified-delay: true
 tcp-concurrent: true
 proxies:
-- name: '0849 | 🇩🇪 Germany | SS | 🔉 YTM | 📺 YT | TG: @YoutubeUnBlockRu'
+- name: '0309 | 🇩🇪 Germany | SS | 🔉 YTM | 📺 YT | TG: @YoutubeUnBlockRu'
+  type: ss
+  server: 213.202.208.199
+  port: 7001
+  cipher: aes-256-gcm
+  password: RexnBgU7EV5ADxG
+  udp: true
+- name: '0414 | 🇩🇪 Germany | SS | 🔉 YTM | 📺 YT | TG: @YoutubeUnBlockRu'
   type: ss
   server: 3.76.30.105
   port: 443
   cipher: aes-256-cfb
   password: amazonskr05
   udp: true
-- name: '1740 | 🇩🇪 Germany | SS | 🔉 YTM | 📺 YT | TG: @YoutubeUnBlockRu'
+- name: '1757 | 🇩🇪 Germany | SS | 🔉 YTM | 📺 YT | TG: @YoutubeUnBlockRu'
   type: ss
-  server: 18.199.102.146
-  port: 443
-  cipher: aes-256-cfb
-  password: amazonskr05
+  server: 209.46.102.22
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: 1hhrqrokj3ag
   udp: true
 tun:
   enable: true
@@ -104,8 +111,9 @@ proxy-groups:
   hidden: true
   proxies:
   - ⚡️ Авто
-  - '0849 | 🇩🇪 Germany | SS | 🔉 YTM | 📺 YT | TG: @YoutubeUnBlockRu'
-  - '1740 | 🇩🇪 Germany | SS | 🔉 YTM | 📺 YT | TG: @YoutubeUnBlockRu'
+  - '0309 | 🇩🇪 Germany | SS | 🔉 YTM | 📺 YT | TG: @YoutubeUnBlockRu'
+  - '0414 | 🇩🇪 Germany | SS | 🔉 YTM | 📺 YT | TG: @YoutubeUnBlockRu'
+  - '1757 | 🇩🇪 Germany | SS | 🔉 YTM | 📺 YT | TG: @YoutubeUnBlockRu'
 - name: 📺 Youtube
   type: select
   hidden: true
