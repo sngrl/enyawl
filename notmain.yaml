@@ -8,20 +8,13 @@ tcp-concurrent: true
 proxies:
 - name: https://t.me/YoutubeUnBlockRu
   type: vless
-  server: 95.163.232.183
+  server: www.speedtest.net
   port: 443
-  uuid: 706c4509-9a68-47a4-a571-c50c4d71f8de
+  uuid: cccf62bc-7acf-4029-ada1-4b3952110b7d
   udp: true
   tls: true
-  network: grpc
-  reality-opts:
-    public-key: V6FabatADtcX7aO9KMjGCadJC4LuQ_5nRViab-z-nFQ
-    short-id: abcd
-    support-x25519mlkem768: true
-  client-fingerprint: safari
-  servername: 5post-gate.x5.ru
-  grpc-opts:
-    grpc-service-name: 5post.gate.v1
+  network: ws
+  servername: www.speedtest.net
 tun:
   enable: true
   stack: system
