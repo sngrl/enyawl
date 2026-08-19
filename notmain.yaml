@@ -8,13 +8,20 @@ tcp-concurrent: true
 proxies:
 - name: https://t.me/YoutubeUnBlockRu
   type: vless
-  server: 172.67.179.98
-  port: 8880
-  uuid: d829cf8d-0a32-4e60-bcc3-a03fb4658ea4
+  server: 5.188.115.185
+  port: 8445
+  uuid: 74f836f4-65a3-4d18-bd99-df4eff70b6dc
   udp: true
-  tls: false
-  network: ws
-  servername: 172.67.179.98
+  tls: true
+  network: grpc
+  reality-opts:
+    public-key: 7IOtSp0-n2_uNS5nMO9ywZbn2HibMRGy0KbLad3szXc
+    short-id: b8cf9578640a9edf
+    support-x25519mlkem768: true
+  client-fingerprint: firefox
+  servername: max.ru
+  grpc-opts:
+    grpc-service-name: grpc
 tun:
   enable: true
   stack: system
