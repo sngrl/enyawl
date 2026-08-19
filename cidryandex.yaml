@@ -6,20 +6,33 @@ ipv6: true
 unified-delay: true
 tcp-concurrent: true
 proxies:
-- name: '1286 | 🇷🇺 Russia | 🏳️ CIDR-Yandex | 🏳️ SNI-VK | VLESS | TG: @YoutubeUnBlockRu'
+- name: '0085 | 🇷🇺 Russia | 🏳️ CIDR-Yandex | VLESS | TG: @YoutubeUnBlockRu'
   type: vless
-  server: 84.201.165.181
+  server: 158.160.196.224
   port: 443
-  uuid: 96b308b3-6aaa-424b-a52c-4e27617fbddf
+  uuid: 391f093f-85fc-473d-abe2-ea607b9ff567
   udp: true
   tls: true
-  reality-opts:
-    public-key: bwuT_tpimT_uUeWpSn-HbRztfol4o4uCcUHcdvkeFx0
-    short-id: 27e53bbcab7593d7
-    support-x25519mlkem768: true
-  client-fingerprint: firefox
-  servername: www.vk.com
-  flow: xtls-rprx-vision
+  network: ws
+  servername: cloudflare.vhub.pro
+- name: '1702 | 🇷🇺 Russia | 🏳️ CIDR-Yandex | VLESS | TG: @YoutubeUnBlockRu'
+  type: vless
+  server: 84.201.128.112
+  port: 443
+  uuid: 391f093f-85fc-473d-abe2-ea607b9ff567
+  udp: true
+  tls: true
+  network: ws
+  servername: cloudflare.vhub.pro
+- name: '2192 | 🇷🇺 Russia | 🏳️ CIDR-Yandex | VLESS | TG: @YoutubeUnBlockRu'
+  type: vless
+  server: 158.160.171.90
+  port: 443
+  uuid: 391f093f-85fc-473d-abe2-ea607b9ff567
+  udp: true
+  tls: true
+  network: ws
+  servername: cloudflare.vhub.pro
 tun:
   enable: true
   stack: system
@@ -104,7 +117,9 @@ proxy-groups:
   hidden: true
   proxies:
   - ⚡️ Авто
-  - '1286 | 🇷🇺 Russia | 🏳️ CIDR-Yandex | 🏳️ SNI-VK | VLESS | TG: @YoutubeUnBlockRu'
+  - '0085 | 🇷🇺 Russia | 🏳️ CIDR-Yandex | VLESS | TG: @YoutubeUnBlockRu'
+  - '1702 | 🇷🇺 Russia | 🏳️ CIDR-Yandex | VLESS | TG: @YoutubeUnBlockRu'
+  - '2192 | 🇷🇺 Russia | 🏳️ CIDR-Yandex | VLESS | TG: @YoutubeUnBlockRu'
 - name: 📺 Youtube
   type: select
   hidden: true
