@@ -6,34 +6,19 @@ ipv6: true
 unified-delay: true
 tcp-concurrent: true
 proxies:
-- name: '1010 | 🇷🇺 Russia | 🏳️ CIDR-VK | 🏳️ SNI-VK | VLESS | TG: @YoutubeUnBlockRu'
+- name: '0938 | 🌐 Unknown | 🏳️ CIDR-VK | 🏳️ SNI-MAX | VLESS | TG: @YoutubeUnBlockRu'
   type: vless
-  server: 95.163.250.241
-  port: 8443
-  uuid: 694fbac8-56da-4ecd-be68-59c57b700e93
-  udp: true
-  tls: true
-  network: raw
-  reality-opts:
-    public-key: rGeqvmEcctHYxt19USUHXgGzMkUx-Tna8bq5KRNw7EY
-    short-id: b59d33a750d35e66
-    support-x25519mlkem768: true
-  client-fingerprint: firefox
-  servername: eh.vk.com
-  flow: xtls-rprx-vision
-- name: '1375 | 🇷🇺 Russia | 🏳️ CIDR-VK | 🏳️ SNI-VK | VLESS | TG: @YoutubeUnBlockRu'
-  type: vless
-  server: 95.163.250.241
-  port: 8443
-  uuid: 694fbac8-56da-4ecd-be68-59c57b700e93
+  server: node3.frost-api.com
+  port: 443
+  uuid: cbe5611f-392b-4ec3-9d8b-5bbe59c0fa68
   udp: true
   tls: true
   reality-opts:
-    public-key: rGeqvmEcctHYxt19USUHXgGzMkUx-Tna8bq5KRNw7EY
-    short-id: b59d33a750d35e66
+    public-key: SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw
+    short-id: e7
     support-x25519mlkem768: true
-  client-fingerprint: firefox
-  servername: eh.vk.com
+  client-fingerprint: chrome
+  servername: max.ru
   flow: xtls-rprx-vision
 tun:
   enable: true
@@ -119,8 +104,7 @@ proxy-groups:
   hidden: true
   proxies:
   - ⚡️ Авто
-  - '1010 | 🇷🇺 Russia | 🏳️ CIDR-VK | 🏳️ SNI-VK | VLESS | TG: @YoutubeUnBlockRu'
-  - '1375 | 🇷🇺 Russia | 🏳️ CIDR-VK | 🏳️ SNI-VK | VLESS | TG: @YoutubeUnBlockRu'
+  - '0938 | 🌐 Unknown | 🏳️ CIDR-VK | 🏳️ SNI-MAX | VLESS | TG: @YoutubeUnBlockRu'
 - name: 📺 Youtube
   type: select
   hidden: true
